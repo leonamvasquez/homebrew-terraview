@@ -13,7 +13,7 @@ class Terraview < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/leonamvasquez/terraview/releases/download/v0.1.0/terraview-darwin-amd64.tar.gz"
-      sha256 "b6ba1b93cc16315fb8cb5672f3af212be0419a4a48a6bb7e42367952a1f33316"
+      sha256 "540b2e3531671453c521a2c8c409d0d04d7d8e13fc2a9efcf8a715f5669de817"
 
       define_method(:install) do
         bin.install "terraview"
@@ -24,7 +24,7 @@ class Terraview < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/leonamvasquez/terraview/releases/download/v0.1.0/terraview-darwin-arm64.tar.gz"
-      sha256 "81b775ed454d2f8df18aef2d232b7b90562350c924739fce49442488f0293f7c"
+      sha256 "c724c7481870c9099298e635cd1ec489c82e5079e740201a52b9038677a0a602"
 
       define_method(:install) do
         bin.install "terraview"
@@ -38,7 +38,7 @@ class Terraview < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/leonamvasquez/terraview/releases/download/v0.1.0/terraview-linux-amd64.tar.gz"
-      sha256 "af50790e728f358a1185fcfc9500a41a61d8237ec52196e385f0a8c7cba8068b"
+      sha256 "226642d9853713cb0541c563b407c714e328f4f24fa2d5a9ea794a7224d17a16"
       define_method(:install) do
         bin.install "terraview"
         ln -sf bin/"terraview" libexec/"tv"
@@ -48,7 +48,7 @@ class Terraview < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/leonamvasquez/terraview/releases/download/v0.1.0/terraview-linux-arm64.tar.gz"
-      sha256 "a0cfcd5d8e3e8ff4266049e719185e8af5c994cb92469e4374a375936795ccf4"
+      sha256 "8c44635cf05f48e58177017e0c6404215b2d00ef3dd4c206065e02afd45e22fd"
       define_method(:install) do
         bin.install "terraview"
         ln -sf bin/"terraview" libexec/"tv"
